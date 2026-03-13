@@ -1,5 +1,18 @@
 # main links
 main:
+- title: "Dust Punk"
+  url: /dustpunk/
+- title: "About"
+  url: /whoareus/
+
+
+
+
+
+
+
+
+
  # - title: "Quick-Start Guide"
  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"

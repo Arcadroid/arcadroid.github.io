@@ -2,4 +2,87 @@
 layout: home
 author_profile: true
 entries_layout: grid
+header:
+  overlay_image: /assets/images/FondoOxido.png
+excerpt: >
+  <div class="postal-hero-content">
+    <div class="columna-izquierda">
+      <img src="/assets/images/LogTypoDPW.png" alt="Dust Punk Logo" class="logo-dustpunk-img">
+      <div class="caja-texto-oscura">
+        <h2>"FEEL THE ADRENALINE WITH STYLE"</h2>
+      </div>
+    </div>
+    <div class="columna-derecha">
+      <div class="video-bordeado">
+        <iframe src="https://www.youtube.com/embed/3iHhCddleD4?si=zU8sOjS1BHBRHOCK" title="Video de Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; aspect-ratio: 16/9; display: block;"></iframe>
+      </div>
+    </div>
+  </div>
 ---
+
+<style>
+  /* 1. ELIMINAR EL TÍTULO "INICIO" Y DARLE ESTILO AL CONTENEDOR NATIVO */
+  @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+  h1#page-title, .page__title { 
+    display: none !important; 
+  }
+  
+  .page__hero--overlay {
+    border-bottom: 5px solid #000; /* Borde rudo en la parte baja del cartel */
+    padding: 80px 0; /* Espacio para que respire */
+  }
+
+  /* 2. Contenedor de nuestras columnas */
+  .postal-hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    text-align: left; /* Evita que el tema centre los textos a la fuerza */
+    width: 100%;
+  }
+
+  /* 3. Medidas de las Columnas */
+  .columna-izquierda {
+    flex: 1 1 45%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .columna-derecha {
+    flex: 1 1 45%;
+    min-width: 300px;
+  }
+
+  /* 4. ESTÉTICA DE LOS ELEMENTOS */
+  .logo-dustpunk-img {
+    max-width: 450px;
+    width: 100%;
+    margin-bottom: 15px;
+    filter: drop-shadow(5px 5px 0px rgba(0,0,0,0.8)); 
+  }
+
+  .caja-texto-oscura {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 15px 25px;
+    color: white;
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.5);
+    display: inline-block;
+  }
+
+  .caja-texto-oscura h2 {
+    margin: 0;
+    font-size: 1.8em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-family: 'Special Elite', system-ui; /* Esta es la línea clave */
+    letter-spacing: 2px; /* Opcional: separa un poco las letras para que se lea mejor */
+  }
+
+  .video-bordeado img {
+    width: 100%;
+    border: 5px solid #000;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.5);
+  }
+</style>
