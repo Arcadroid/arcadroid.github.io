@@ -1,57 +1,57 @@
 ---
 layout: single
-title: "ENCUESTA: ¿Con qué juego quieren que se asocie más Dust Punk?"
-date: 2026-11-19
+title: "Community Poll: What game should Dust Punk feel most like?"
+date: 2026-09-15
 categories:
-  - Comunidad
+  - Community
 tags:
-  - Encuesta
+  - Poll
   - Dust Punk
   - Feedback
 header:
   teaser: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDWouJ1j1LWw8k0MIy7B5bCbuPvmAyJB-Z7WXjC7fNZURzaOybU6K8CcA&s=10"
 ---
 
-Queremos conocer la opinión de la comunidad mientras seguimos puliendo las mecánicas, los escenarios y la atmósfera de **Dust Punk**. 
+We want to get a sense of what the community is looking forward to the most while we continue building out the world, mechanics, and visual identity of **Dust Punk**. 
 
-Queremos saber qué vibra o estilo de juego te gustaría que tuviera mayor peso en la experiencia final.
+What vibe or gameplay style would you like to see take the lead in the final experience?
 
-A continuación puedes ver cómo van las votaciones o dejar tu propio voto para apoyar tu estilo favorito:
+Check out the current results below or cast your vote to help steer the vibe:
 
 <div id="dustpunk-poll-container" class="dustpunk-poll">
   <div class="poll-header">
-    <h3>ENCUESTA, Con que juego quieren que se asocie o parezca más Dust Punk:</h3>
-    <p class="poll-subtext">Selecciona una opción para emitir tu voto.</p>
+    <h3>COMMUNITY POLL: Which game should Dust Punk feel most like?</h3>
+    <p class="poll-subtext">Select an option below to cast your vote.</p>
   </div>
 
   <div class="poll-options">
     <div class="poll-option" data-id="0" onclick="handlePollVote(0)">
       <div class="poll-bar" id="bar-0" style="width: 46%;"></div>
       <div class="poll-content">
-        <span class="poll-label">Juego Estilo MadMax</span>
-        <span class="poll-stats"><span id="pct-0">46%</span> (<span id="votes-0">6</span> votos)</span>
+        <span class="poll-label">Mad Max style game</span>
+        <span class="poll-stats"><span id="pct-0">46%</span> (<span id="votes-0">6</span> votes)</span>
       </div>
     </div>
 
     <div class="poll-option" data-id="1" onclick="handlePollVote(1)">
       <div class="poll-bar" id="bar-1" style="width: 30%;"></div>
       <div class="poll-content">
-        <span class="poll-label">Juego estilo Zelda desertico</span>
-        <span class="poll-stats"><span id="pct-1">30%</span> (<span id="votes-1">4</span> votos)</span>
+        <span class="poll-label">Desert Zelda style game</span>
+        <span class="poll-stats"><span id="pct-1">30%</span> (<span id="votes-1">4</span> votes)</span>
       </div>
     </div>
 
     <div class="poll-option" data-id="2" onclick="handlePollVote(2)">
       <div class="poll-bar" id="bar-2" style="width: 24%;"></div>
       <div class="poll-content">
-        <span class="poll-label">Juego Estilo Fallout</span>
-        <span class="poll-stats"><span id="pct-2">24%</span> (<span id="votes-2">3</span> votos)</span>
+        <span class="poll-label">Fallout style game</span>
+        <span class="poll-stats"><span id="pct-2">24%</span> (<span id="votes-2">3</span> votes)</span>
       </div>
     </div>
   </div>
 
   <div class="poll-footer">
-    <span id="poll-total-text">13 personas votaron en total</span>
+    <span id="poll-total-text">13 people voted in total</span>
     <span id="poll-status" class="poll-status-msg"></span>
   </div>
 </div>
@@ -154,8 +154,8 @@ A continuación puedes ver cómo van las votaciones o dejar tu propio voto para 
 
 <script>
   (function() {
-    const STORAGE_KEY = 'dustpunk_poll_voted_choice_v1';
-    const baseVotes = [6, 4, 3]; // 6 MadMax (46%), 4 Zelda (30%), 3 Fallout (24%) = 13 total
+    const STORAGE_KEY = 'dustpunk_poll_voted_choice_v2';
+    const baseVotes = [6, 4, 3]; // 6 Mad Max (46%), 4 Zelda (30%), 3 Fallout (24%) = 13 total
 
     function getStoredVote() {
       try {
@@ -177,7 +177,6 @@ A continuación puedes ver cómo van las votaciones o dejar tu propio voto para 
 
       currentVotes.forEach((count, i) => {
         let pct = Math.round((count / total) * 100);
-        // Si no ha votado el usuario, asegurar exactamente los porcentajes solicitados
         if (userChoice === null) {
           if (i === 0) pct = 46;
           if (i === 1) pct = 30;
@@ -205,12 +204,12 @@ A continuación puedes ver cómo van las votaciones o dejar tu propio voto para 
 
       const totalText = document.getElementById('poll-total-text');
       if (totalText) {
-        totalText.textContent = total + ' personas votaron en total';
+        totalText.textContent = total + ' people voted in total';
       }
 
       const statusEl = document.getElementById('poll-status');
       if (statusEl && userChoice !== null) {
-        statusEl.textContent = '✓ ¡Voto registrado!';
+        statusEl.textContent = '✓ Vote recorded!';
       }
     }
 
