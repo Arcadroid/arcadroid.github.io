@@ -8,3 +8,72 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+/* ==========================================================================
+   Custom Navigation Outline Buttons
+   ========================================================================== */
+
+.masthead__menu {
+  .visible-links {
+    display: flex;
+    align-items: center;
+
+    .masthead__menu-item {
+      margin: 0 0.35rem;
+
+      a {
+        display: inline-block;
+        margin: 0;
+        padding: 0.45rem 1.15rem;
+        border: 2px solid $primary-color;
+        border-radius: 4px;
+        color: $text-color;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        transition: all 0.25s ease-in-out;
+
+        &:before {
+          display: none !important;
+        }
+
+        &:hover {
+          background-color: $primary-color;
+          color: #ffffff !important;
+          box-shadow: 0 0 12px rgba($primary-color, 0.6);
+        }
+      }
+    }
+  }
+
+  .hidden-links {
+    .masthead__menu-item {
+      margin: 0.4rem 0;
+
+      a {
+        display: block;
+        padding: 0.5rem 1rem;
+        border: 2px solid $primary-color;
+        border-radius: 4px;
+        color: $text-color;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.25s ease-in-out;
+
+        &:before {
+          display: none !important;
+        }
+
+        &:hover {
+          background-color: $primary-color;
+          color: #ffffff !important;
+          box-shadow: 0 0 10px rgba($primary-color, 0.5);
+        }
+      }
+    }
+  }
+}
+
+
