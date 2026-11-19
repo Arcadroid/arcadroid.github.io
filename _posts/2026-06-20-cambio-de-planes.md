@@ -8,7 +8,11 @@ tags:
   - Game Dev
   - Dust Punk
   - Update
+header:
+  teaser: https://www.worldofleveldesign.com/categories/ue4/images/049-ue4-breakdown-desert-environment-26.jpg
 ---
+
+![Desert Environment](https://www.worldofleveldesign.com/categories/ue4/images/049-ue4-breakdown-desert-environment-26.jpg){: .align-center}
 
 Hey everyone, quick update on where things are at with Dust Punk.
 

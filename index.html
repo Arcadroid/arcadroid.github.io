@@ -22,13 +22,13 @@ excerpt: >
 
 <style>
   /* 1. ELIMINAR EL TÍTULO "INICIO" Y DARLE ESTILO AL CONTENEDOR NATIVO */
-  @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rajdhani:wght@600;700&display=swap');
   h1#page-title, .page__title { 
     display: none !important; 
   }
   
   .page__hero--overlay {
-    border-bottom: 5px solid #000; /* Borde rudo en la parte baja del cartel */
+    border-bottom: 5px solid #382417; /* Borde rudo óxido en la parte baja del cartel */
     padding: 80px 0; /* Espacio para que respire */
   }
 
@@ -55,35 +55,39 @@ excerpt: >
     min-width: 300px;
   }
 
-  /* 4. ESTÉTICA DE LOS ELEMENTOS */
+  /* 4. ESTÉTICA DE LOS ELEMENTOS (ESTILO MAD MAX / OXIDO) */
   .logo-dustpunk-img {
     max-width: 450px;
     width: 100%;
     margin-bottom: 15px;
-    filter: drop-shadow(5px 5px 0px rgba(0,0,0,0.8)); 
+    filter: drop-shadow(6px 6px 0px rgba(0,0,0,0.85)); 
   }
 
   .caja-texto-oscura {
-    background: rgba(0, 0, 0, 0.85);
-    padding: 15px 25px;
-    color: white;
-    box-shadow: 8px 8px 0px rgba(0,0,0,0.5);
+    background: rgba(18, 14, 11, 0.94);
+    border-left: 5px solid #c85a17;
+    padding: 16px 26px;
+    color: #ebdcd0;
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.8);
     display: inline-block;
   }
 
   .caja-texto-oscura h2 {
     margin: 0;
-    font-size: 1.8em;
-    line-height: 1.2;
+    font-size: 1.75em;
+    line-height: 1.25;
     text-transform: uppercase;
-    font-family: 'Special Elite', system-ui; /* Esta es la línea clave */
-    letter-spacing: 2px; /* Opcional: separa un poco las letras para que se lea mejor */
+    font-family: 'Black Ops One', cursive, sans-serif;
+    letter-spacing: 2.5px;
+    color: #f7ede2;
+    text-shadow: 2px 2px 0px #000;
   }
 
   .video-bordeado iframe,
   .video-bordeado img {
     width: 100%;
-    border: 5px solid #000;
-    box-shadow: 10px 10px 0px rgba(0,0,0,0.5);
+    border: 4px solid #3d2516;
+    outline: 2px solid #c85a17;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.85);
   }
 </style>

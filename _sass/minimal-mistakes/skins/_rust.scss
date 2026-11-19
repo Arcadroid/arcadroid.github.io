@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Rust / Wasteland skin (Mad Max style)
+   ========================================================================== */
+
+/* Colors */
+$background-color: #120e0b !default; // Deep scorched earth / oxidized iron
+$text-color: #ebdcd0 !default;       // Dusty bone / weathered parchment
+$primary-color: #c85a17 !default;    // Raw oxidized iron / rust orange
+$border-color: #442d1f !default;     // Weathered rust seams
+$code-background-color: #1a1410 !default;
+$code-background-color-dark: #140f0c !default;
+$form-background-color: #1a1410 !default;
+$footer-background-color: #0c0907 !default;
+$link-color: #d96b27 !default;
+$link-color-hover: #f39c12 !default;
+$link-color-visited: #a64813 !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: #e67e22 !default;
+$navicon-link-color-hover: #3a2215 !default;
+
+/* notices */
+$notice-background-mix: 85% !default;
+$code-notice-background-mix: 90% !default;
+
+/* rust syntax highlighting (base16) */
+$base00: #120e0b !default;
+$base01: #1c1511 !default;
+$base02: #34241a !default;
+$base03: #6e503b !default;
+$base04: #a37c5e !default;
+$base05: #ebdcd0 !default;
+$base06: #f4eae1 !default;
+$base07: #ffffff !default;
+$base08: #d63031 !default;
+$base09: #e67e22 !default;
+$base0a: #f1c40f !default;
+$base0b: #8aab54 !default;
+$base0c: #5c9c9c !default;
+$base0d: #c85a17 !default;
+$base0e: #b33917 !default;
+$base0f: #a04000 !default;
+
+.author__urls.social-icons i,
+.author__urls.social-icons .svg-inline--fa,
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons .svg-inline--fa  {
+  color: inherit;
+}
+
+/* next/previous buttons */
+.pagination--pager {
+  color: #fff;
+  background-color: $primary-color;
+  border-color: #442d1f;
+
+  &:visited {
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: lighten($primary-color, 8%);
+  }
+}
+
+.ais-search-box .ais-search-box--input {
+  background-color: $form-background-color;
+}
