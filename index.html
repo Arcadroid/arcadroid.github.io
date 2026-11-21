@@ -21,28 +21,32 @@ excerpt: >
 ---
 
 <style>
-  /* 1. ELIMINAR EL TÍTULO "INICIO" Y DARLE ESTILO AL CONTENEDOR NATIVO */
   @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rajdhani:wght@600;700&display=swap');
+
+  /* ==========================================================================
+     Hero Container
+     ========================================================================== */
   h1#page-title, .page__title { 
     display: none !important; 
   }
   
   .page__hero--overlay {
-    border-bottom: 5px solid #382417; /* Borde rudo óxido en la parte baja del cartel */
-    padding: 80px 0; /* Espacio para que respire */
+    border-bottom: 5px solid #382417;
+    padding: 80px 0;
   }
 
-  /* 2. Contenedor de nuestras columnas */
+  /* ==========================================================================
+     Hero Columns
+     ========================================================================== */
   .postal-hero-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 40px;
-    text-align: left; /* Evita que el tema centre los textos a la fuerza */
+    text-align: left;
     width: 100%;
   }
 
-  /* 3. Medidas de las Columnas */
   .columna-izquierda {
     flex: 1 1 45%;
     min-width: 300px;
@@ -50,17 +54,20 @@ excerpt: >
     flex-direction: column;
     align-items: flex-start;
   }
+
   .columna-derecha {
     flex: 1 1 45%;
     min-width: 300px;
   }
 
-  /* 4. ESTÉTICA DE LOS ELEMENTOS (ESTILO MAD MAX / OXIDO) */
+  /* ==========================================================================
+     Hero Elements
+     ========================================================================== */
   .logo-dustpunk-img {
     max-width: 450px;
     width: 100%;
     margin-bottom: 15px;
-    filter: drop-shadow(6px 6px 0px rgba(0,0,0,0.85)); 
+    filter: drop-shadow(6px 6px 0px rgba(0, 0, 0, 0.85)); 
   }
 
   .caja-texto-oscura {
@@ -68,7 +75,7 @@ excerpt: >
     border-left: 5px solid #c85a17;
     padding: 16px 26px;
     color: #ebdcd0;
-    box-shadow: 8px 8px 0px rgba(0,0,0,0.8);
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.8);
     display: inline-block;
   }
 
@@ -88,6 +95,6 @@ excerpt: >
     width: 100%;
     border: 4px solid #3d2516;
     outline: 2px solid #c85a17;
-    box-shadow: 10px 10px 0px rgba(0,0,0,0.85);
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.85);
   }
 </style>

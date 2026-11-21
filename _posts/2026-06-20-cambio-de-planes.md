@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Change of Plans"
+title: "Devlog: Change of Plans"
 date: 2026-06-20
 categories:
   - Desarrollo

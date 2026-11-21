@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Behind the Scenes: How the AI, Boss, and NPCs Work"
+title: "Devlog: AI, Boss Fight & NPCs"
 date: 2026-11-01
 categories:
   - Desarrollo

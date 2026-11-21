@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Devlog PreRelease: Almost There"
+title: "Devlog: Pre-Release (Almost There)"
 date: 2026-11-19
 categories:
   - Desarrollo
