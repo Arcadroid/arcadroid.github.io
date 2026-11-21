@@ -123,27 +123,36 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Wasteland Post Cards (Grid) with Hover Zoom Effect
+   Wasteland Post Cards (Grid 3x3) with Hover Zoom Effect
    ========================================================================== */
 
 .archive__subtitle {
   font-family: 'Teko', sans-serif;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: #e67e22;
   border-bottom: 3px solid #442d1f;
-  padding-bottom: 0.35rem;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  padding-bottom: 0.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .entries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 26px;
-  margin: 1.5rem 0 3rem 0;
+  grid-template-columns: repeat(3, 1fr); // Acomodo de 3 columnas
+  gap: 16px;
+  margin: 1.25rem 0 3rem 0;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  @media (max-width: 580px) {
+    grid-template-columns: 1fr;
+  }
 
   .grid__item {
     float: none !important;
@@ -157,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #19130f;
   border: 2px solid #442d1f;
   border-radius: 6px;
-  padding: 18px;
+  padding: 0 0 12px 0 !important; // Sin padding para que la imagen toque los bordes laterales
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -170,26 +179,33 @@ h1, h2, h3, h4, h5, h6 {
 
   /* Resaltado interactivo al pasar el cursor (zoom / hover effect) */
   &:hover {
-    transform: translateY(-8px) scale(1.035);
+    transform: translateY(-6px) scale(1.03);
     border-color: #c85a17;
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.9), 0 0 22px rgba(200, 90, 23, 0.4);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.9), 0 0 18px rgba(200, 90, 23, 0.4);
   }
 
+  /* La miniatura abarca completamente el ancho de la tarjeta a los lados */
   .archive__item-teaser {
-    margin: -18px -18px 16px -18px;
+    margin: 0 !important;
+    width: 100% !important;
+    height: 145px !important;
+    max-height: none !important;
     position: relative;
     overflow: hidden;
     background: #0d0a08;
     border-bottom: 2px solid #442d1f;
-    aspect-ratio: 16/9;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+      width: 100% !important;
+      height: 100% !important;
+      max-height: none !important;
+      object-fit: cover !important; // Rellena sin cortarse a los lados
+      object-position: center !important;
+      display: block !important;
       transition: transform 0.35s ease, filter 0.35s ease;
-      filter: brightness(0.92) contrast(1.05);
+      filter: brightness(0.94) contrast(1.05);
     }
   }
 
@@ -198,13 +214,18 @@ h1, h2, h3, h4, h5, h6 {
     filter: brightness(1) contrast(1.1);
   }
 
+  /* Tamaño de letra reducido y compacto para evitar tarjetas alargadas */
   .archive__item-title {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 1.45rem;
+    font-size: 1.12rem !important; // Letra más reducida y proporcionada
     font-weight: 700;
-    letter-spacing: 0.5px;
-    margin: 0 0 0.5rem 0;
-    line-height: 1.25;
+    letter-spacing: 0.3px;
+    margin: 10px 12px 4px 12px !important;
+    line-height: 1.25 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
 
     a {
       color: #f4e8dc;
@@ -219,17 +240,22 @@ h1, h2, h3, h4, h5, h6 {
 
   .page__meta {
     color: #9f8b7b;
-    font-size: 0.75rem;
+    font-size: 0.68rem !important;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
-    margin: 0 0 0.6rem 0;
+    letter-spacing: 1px;
+    margin: 0 12px 6px 12px !important;
   }
 
+  /* Excerpt limitado a 2 líneas para mantener alturas uniformes */
   .archive__item-excerpt {
-    color: #c2b0a1;
-    font-size: 0.92rem;
-    line-height: 1.5;
+    color: #bfaea0;
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+    margin: 0 12px !important;
     flex-grow: 1;
-    margin: 0;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
   }
 }
